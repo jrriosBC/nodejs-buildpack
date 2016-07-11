@@ -43,25 +43,7 @@ source $BP_DIR/lib/dependencies.sh
 
 ### Install FFMPEG
 
-indent() {
-  sed -u 's/^/       /'
-}
-
-echo "-----> Install ImageMagick"
-VENDOR_DIR="vendor"
-DOWNLOAD_URL="ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/linux/GraphicsMagick-1.3.24-1.src.rpm"
-
-echo "DOWNLOAD_URL = " $DOWNLOAD_URL | indent
-
-cd $BUILD_DIR
-mkdir -p $VENDOR_DIR
-cd $VENDOR_DIR
-wget $DOWNLOAD_URL 
-
-apt-get install rpm -y
-
-rpm -i GraphicsMagick-1.3.24-1.src.rpm
-
+uname -a
 
 
 
